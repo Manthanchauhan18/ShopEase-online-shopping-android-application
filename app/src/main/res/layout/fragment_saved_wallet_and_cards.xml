@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Profile_of_user.Saved_wallet_and_cards"
+    android:orientation="vertical"
+    android:background="@color/screen_background">
+
+    <!--    toolbar for add category start-->
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/toolbar_white"
+        app:contentInsetStart="0dp"
+        app:contentInsetStartWithNavigation="0dp"
+        android:elevation="2dp">
+
+        <!--        imageview for add category back button start-->
+        <ImageView
+            android:id="@+id/txt_profile_saved_cards_back_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back_arrow_white"
+            android:padding="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp">
+
+        </ImageView>
+        <!--        imageview for add category back button close-->
+
+        <!--        textview for add category text close-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Saved Cards &amp; Wallets"
+            android:textSize="25sp"
+            android:textColor="@color/toolbar_title_color"
+            android:layout_marginLeft="5dp">
+
+        </TextView>
+        <!--        textview for add category text close-->
+
+    </androidx.appcompat.widget.Toolbar>
+    <!--    toolbar for add category close-->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:elevation="2dp"
+                    android:layout_margin="10dp"
+                    app:cardCornerRadius="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:text="Saved Cards"
+                            android:textSize="17sp"
+                            android:textColor="@color/black">
+
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/txt_profile_saved_cards_discription"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:text="Saved Cards"
+                            android:textSize="15sp">
+
+                        </TextView>
+
+
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:elevation="2dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginRight="10dp"
+                    app:cardCornerRadius="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:text="UPI"
+                            android:textSize="17sp"
+                            android:textColor="@color/black">
+
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/txt_profile_saved_cards_upi_discription"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:text="UPI"
+                            android:textSize="15sp">
+
+                        </TextView>
+
+
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:elevation="2dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginRight="10dp"
+                    app:cardCornerRadius="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginBottom="5dp"
+                            android:text=" View Transaction History"
+                            android:drawableLeft="@drawable/ic_baseline_history_24"
+                            android:textSize="18sp"
+                            android:padding="3dp"
+                            android:textColor="#595959">
+
+                        </TextView>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/black">
+
+                        </View>
+
+                        <TextView
+                            android:id="@+id/txt_profile_saved_cards_help_discription"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="11.5dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="10dp"
+                            android:text=" Help"
+                            android:drawableLeft="@drawable/ic_baseline_help_outline_24"
+                            android:padding="3dp"
+                            android:textColor="#595959"
+                            android:textSize="17sp">
+
+                        </TextView>
+
+
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

@@ -1,0 +1,1447 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--linearlayout for home fragment start-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.Home.HomeFragment"
+    android:orientation="vertical"
+    android:background="@color/screen_background">
+
+<!--    toolbar start-->
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/toolbar_white"
+        app:contentInsetStart="0dp"
+        app:contentInsetStartWithNavigation="0dp"
+        android:elevation="2dp">
+
+<!--        toolbar home textview-->
+        <TextView
+            android:id="@+id/user_home_txt_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Home"
+            android:textSize="@dimen/toolbar_title"
+            android:layout_marginLeft="15dp"
+            android:textColor="@color/toolbar_title_color">
+
+        </TextView>
+
+    </androidx.appcompat.widget.Toolbar>
+<!--    toolbar end-->
+
+
+<!--    scrollview for home layout start-->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:fillViewport="true"
+        android:clipToPadding="false">
+
+
+<!--        linear layout for display home-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <!--            textview for username-->
+                    <TextView
+                        android:id="@+id/txt_home_username"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Hello,"
+                        android:padding="5dp"
+                        android:layout_marginLeft="20dp"
+                        android:textSize="@dimen/hello"
+                        android:textColor="@color/black"
+                        android:layout_marginTop="5dp">
+
+                    </TextView>
+                    <!--            textview for username close-->
+
+                    <androidx.appcompat.widget.SearchView
+                        android:id="@+id/category_appliance_searchview"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="@drawable/category_seachview_background"
+                        app:defaultQueryHint="Search Product"
+                        app:iconifiedByDefault="false"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginBottom="5dp"
+                        app:queryBackground="@null"
+                        app:searchIcon="@drawable/search_icon">
+
+                    </androidx.appcompat.widget.SearchView>
+
+
+
+
+                </LinearLayout>
+
+
+
+
+
+            </androidx.cardview.widget.CardView>
+
+
+<!--            linear layout for top discount-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="10dp">
+
+<!--                top discount textview-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Top Discount:"
+                    android:layout_marginTop="5dp"
+                    android:textSize="@dimen/home_section_title"
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="10dp">
+
+                </TextView>
+<!--                top discount textview close-->
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/user_home_imageslider_offer_recyclerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+
+            </LinearLayout>
+<!--            linearlayout for top discount close-->
+
+
+<!--            linear layout for select categories start-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+
+<!--                linearlayout for select categories and view more-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    android:layout_marginTop="5dp">
+
+<!--                    textview for select categories start-->
+                    <TextView
+                        android:layout_weight="1.9"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Select Categories:"
+                        android:textSize="@dimen/home_section_title"
+                        android:textColor="@color/black"
+                        android:layout_marginLeft="10dp">
+
+                    </TextView>
+<!--                    textview for select categories close-->
+
+<!--                    textview for view more start-->
+                    <TextView
+                        android:id="@+id/txt_categories_view_more"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="View More"
+                        android:textColor="#3F51B5"
+                        android:textSize="@dimen/home_section_view_more">
+
+                    </TextView>
+<!--                    textview for view more close-->
+
+
+                </LinearLayout>
+<!--                linearlayout for select categories and view more close-->
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/user_home_categories_recyclerview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:nestedScrollingEnabled="false">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+<!--            linearlayout for select categories close-->
+
+
+<!--            cardview for deals of the day start-->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+
+<!--                linearlayout for deals of the day start -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+<!--                    linearlayout for deals of the day text start-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp">
+
+<!--                        textview for deals of the day text start-->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Deals of the Day:"
+                            android:textSize="@dimen/home_section_title"
+                            android:textColor="@color/black"
+                            android:layout_marginLeft="10dp">
+
+                        </TextView>
+<!--                        textview for deals of the day text close-->
+
+                    </LinearLayout>
+<!--                    linearlayout for deals of the day text close-->
+
+<!--                    linearlayout for contnet of deals of the day start-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/cardview_white"
+                        android:orientation="vertical">
+
+<!--                        imageslide for deals of the day start-->
+                        <com.denzcoskun.imageslider.ImageSlider
+                            android:id="@+id/home_image_slider_deals_of_the_day"
+                            android:layout_width="match_parent"
+                            android:layout_height="170dp"
+                            app:iss_period="1000"
+                            app:iss_auto_cycle="true"
+                            app:iss_delay="1000"
+                            app:iss_corner_radius="20">
+
+                        </com.denzcoskun.imageslider.ImageSlider>
+<!--                        imageslider for deals of the day close-->
+
+<!--                        linearlayout for cardview of product start-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="4"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp">
+
+<!--                            cardview for first product start-->
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cardview_1"
+                                android:layout_weight="1"
+                                android:layout_width="0dp"
+                                android:layout_height="70dp"
+                                app:cardBackgroundColor="#EDEDED"
+                                app:cardCornerRadius="10dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_marginTop="5dp">
+
+<!--                                imageview for first product start-->
+                                <ImageView
+                                    android:id="@+id/home_deal_image_1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="5dp">
+
+                                </ImageView>
+<!--                                imageview for first product close-->
+
+                            </androidx.cardview.widget.CardView>
+<!--                            cardview for first product close-->
+
+<!--                            cardview for second producrt start-->
+                            <androidx.cardview.widget.CardView
+                                android:layout_weight="1"
+                                android:layout_width="0dp"
+                                android:layout_height="70dp"
+                                app:cardBackgroundColor="#EDEDED"
+                                app:cardCornerRadius="10dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_marginTop="5dp">
+
+<!--                                imageview for second product start-->
+                                <ImageView
+                                    android:id="@+id/home_deal_image_2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="5dp">
+
+                                </ImageView>
+<!--                                imageview for seconf product close-->
+
+                            </androidx.cardview.widget.CardView>
+<!--                            cardview for second product close-->
+
+<!--                            cardview for third product start-->
+                            <androidx.cardview.widget.CardView
+                                android:layout_weight="1"
+                                android:layout_width="0dp"
+                                android:layout_height="70dp"
+                                app:cardBackgroundColor="#EDEDED"
+                                app:cardCornerRadius="10dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_marginTop="5dp">
+
+<!--                                imageview for third product start-->
+                                <ImageView
+                                    android:id="@+id/home_deal_image_3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="5dp">
+
+                                </ImageView>
+<!--                                imageview for third product close-->
+
+                            </androidx.cardview.widget.CardView>
+<!--                            cardview for third product close-->
+
+<!--                            cardview for fourth product start-->
+                            <androidx.cardview.widget.CardView
+                                android:layout_weight="1"
+                                android:layout_width="0dp"
+                                android:layout_height="70dp"
+                                app:cardBackgroundColor="#EDEDED"
+                                app:cardCornerRadius="10dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_marginTop="5dp">
+
+<!--                                imageview for fourth product start-->
+                                <ImageView
+                                    android:id="@+id/home_deal_image_4"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="5dp">
+
+                                </ImageView>
+<!--                                imageview for fourth product close-->
+
+                            </androidx.cardview.widget.CardView>
+<!--                            cardview for fourth producr close-->
+
+                        </LinearLayout>
+<!--                        lineatlayout for fourth product close-->
+
+<!--                        linearlayout for see more text start-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+<!--                            textview for see more text start-->
+                            <TextView
+                                android:id="@+id/user_home_deals_of_the_day_see_all"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="See More"
+                                android:textSize="@dimen/home_section_view_more"
+                                android:textColor="#3F51B5"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginBottom="5dp">
+
+                            </TextView>
+<!--                            textview for see more close-->
+
+                        </LinearLayout>
+<!--                        lineatlayout for see more text close-->
+
+                    </LinearLayout>
+<!--                    linearlayout for deals of the day content close-->
+
+                </LinearLayout>
+<!--                linearlayout for deals of the day close-->
+
+            </androidx.cardview.widget.CardView>
+<!--            cardview for deals of the day close-->
+
+
+<!--            cardview for upgrade to smart tv start-->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+
+<!--                linearlayout for upgrade to smart tv start-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:background="@color/home_four_items_card_background">
+
+<!--                    linearlayout for upgrade to smart tv text start-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp">
+
+<!--                        textview for upgrade to smart tv text start-->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Upgrade to smart TV:"
+                            android:textSize="@dimen/home_section_title"
+                            android:textColor="@color/black"
+                            android:layout_marginLeft="10dp">
+
+                        </TextView>
+<!--                        textview for upgrade to smart tv text close-->
+
+                    </LinearLayout>
+<!--                    linearlayout for upgrade to smart tv text close-->
+
+<!--                    linearlayout for upgrade to smart tv first line start -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_weight="2">
+
+<!--                        cardview for first tv start-->
+                        <androidx.cardview.widget.CardView
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="170dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:elevation="2dp"
+                            app:cardCornerRadius="5dp">
+
+<!--                            linearlayout for first tv start-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:weightSum="2">
+
+<!--                                imageview for first tv start-->
+                                <ImageView
+                                    android:id="@+id/home_image_tv_1"
+                                    android:layout_weight="1.7"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:padding="2dp">
+
+                                </ImageView>
+<!--                                imageview for first tv close-->
+
+<!--                                textview for first tv start-->
+                                <TextView
+                                    android:id="@+id/home_txt_tv_1"
+                                    android:layout_weight="0.3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="0dp"
+                                    android:layout_gravity="center"
+                                    android:textSize="15sp"
+                                    android:layout_margin="5dp"
+                                    android:textColor="@color/black">
+
+                                </TextView>
+<!--                                textview for first tv close-->
+
+                            </LinearLayout>
+<!--                            lineatlayout for first tv close-->
+
+                        </androidx.cardview.widget.CardView>
+<!--                        cardview for first tv close-->
+
+
+<!--                        card view for second tv start-->
+                        <androidx.cardview.widget.CardView
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="170dp"
+                            android:elevation="2dp"
+                            app:cardCornerRadius="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="5dp">
+
+<!--                            linearlayout for second tv start-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:weightSum="2">
+
+<!--                                imageview for second tv start-->
+                                <ImageView
+                                    android:id="@+id/home_image_tv_2"
+                                    android:layout_weight="1.7"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:padding="2dp">
+
+                                </ImageView>
+<!--                                imageview for second tv close-->
+
+<!--                                textview for second tv start-->
+                                <TextView
+                                    android:id="@+id/home_txt_tv_2"
+                                    android:layout_weight="0.3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="0dp"
+                                    android:layout_gravity="center"
+                                    android:textSize="15sp"
+                                    android:layout_margin="5dp"
+                                    android:textColor="@color/black">
+
+                                </TextView>
+<!--                                textview for second tv close-->
+
+                            </LinearLayout>
+<!--                            linearlayout for second tv close-->
+
+                        </androidx.cardview.widget.CardView>
+<!--                        cardview for second tv close-->
+
+                    </LinearLayout>
+<!--                    linearlayout for first line close-->
+
+
+<!--                    linearlayout for second line start-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_weight="2">
+
+<!--                        cardview for third tv start-->
+                        <androidx.cardview.widget.CardView
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="170dp"
+                            android:elevation="2dp"
+                            app:cardCornerRadius="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginBottom="10dp">
+
+<!--                            linearlayout for third tv start-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:weightSum="2">
+
+<!--                                imageview for third tv start-->
+                                <ImageView
+                                    android:id="@+id/home_image_tv_3"
+                                    android:layout_weight="1.7"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:padding="2dp">
+
+                                </ImageView>
+<!--                                imageview for third tv close-->
+
+<!--                                textview for third tv start-->
+                                <TextView
+                                    android:id="@+id/home_txt_tv_3"
+                                    android:layout_weight="0.3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="0dp"
+                                    android:layout_gravity="center"
+                                    android:textSize="15sp"
+                                    android:layout_margin="5dp"
+                                    android:textColor="@color/black">
+
+                                </TextView>
+<!--                                textview for third tv close-->
+
+                            </LinearLayout>
+<!--                            linearlayout for third tv close-->
+
+                        </androidx.cardview.widget.CardView>
+<!--                        cardview for third tv close-->
+
+
+<!--                        cardview for fourth tv start-->
+                        <androidx.cardview.widget.CardView
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="170dp"
+                            android:elevation="2dp"
+                            app:cardCornerRadius="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="10dp">
+
+<!--                            linearlayout for fourth tv start-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:weightSum="2">
+
+<!--                                imageview for fourth tv start-->
+                                <ImageView
+                                    android:id="@+id/home_image_tv_4"
+                                    android:layout_weight="1.7"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:padding="5dp">
+
+                                </ImageView>
+<!--                                imageview for fourth tv close-->
+
+<!--                                textview for fourth tv start-->
+                                <TextView
+                                    android:id="@+id/home_txt_tv_4"
+                                    android:layout_weight="0.3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="0dp"
+                                    android:layout_gravity="center"
+                                    android:textSize="15sp"
+                                    android:layout_margin="5dp"
+                                    android:textColor="@color/black">
+
+                                </TextView>
+<!--                                textview for fourth tv close-->
+
+                            </LinearLayout>
+<!--                            linearlayout for fourth tv close-->
+
+                        </androidx.cardview.widget.CardView>
+<!--                        cardview for fourth tv close-->
+
+                    </LinearLayout>
+<!--                    linearlayout for second line close-->
+
+
+<!--                    linearlayout for see all offers start-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+<!--                        textview for see all offers start-->
+                        <TextView
+                            android:id="@+id/user_home_smart_tv_see_all"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="See all"
+                            android:textSize="@dimen/home_section_view_more"
+                            android:textColor="#3F51B5"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginBottom="5dp">
+
+                        </TextView>
+<!--                        textview for see all offers close-->
+
+                    </LinearLayout>
+<!--                    linearlayout for see all offers close-->
+
+                </LinearLayout>
+<!--                linearlayout for upgrade to smart tv close-->
+
+
+            </androidx.cardview.widget.CardView>
+<!--            cardview for upgrade to smart tv close-->
+
+
+<!--            cardview for latest and upcoming smartphone start-->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+
+<!--                linearlayout for latest and upcoming smartphone start-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:background="@color/home_four_items_card_background">
+
+<!--                    linearlayout for latest and upcoming smartphone text start-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp">
+
+<!--                        textview for latest and upcoming smartphone text start-->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Smartphones:"
+                            android:textSize="@dimen/home_section_title"
+                            android:textColor="@color/black"
+                            android:layout_marginLeft="10dp">
+
+                        </TextView>
+<!--                        textview for latesst and upcoming smartphone text close-->
+
+                    </LinearLayout>
+<!--                    linearlayout for latest and upcoming smartphone text close-->
+
+<!--                    linearlayuout for first line start-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_weight="2">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/user_home_smartphone_recyclerview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp">
+
+                        </androidx.recyclerview.widget.RecyclerView>
+
+
+                    </LinearLayout>
+<!--                    linearlayout for fourth smartphone close-->
+
+<!--                    linearlayout for see all text start-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+<!--                        textview for see all text start-->
+                        <TextView
+                            android:id="@+id/txt_smartphone_see_all"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="See all"
+                            android:textSize="15sp"
+                            android:textColor="#3F51B5"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginBottom="5dp">
+
+                        </TextView>
+<!--                        textview for see all text close-->
+
+                    </LinearLayout>
+<!--                    linearlayout for see all text close-->
+
+
+                </LinearLayout>
+<!--                linearlayout for latest and upcoming smartphones close-->
+
+
+            </androidx.cardview.widget.CardView>
+<!--            cardview for latest and upcoming smartphone close-->
+
+
+<!--            card view for headphone brands start-->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+
+                <!--                linearlayout for headphone brands start-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:background="@color/home_four_items_card_background">
+
+                    <!--                    linearlayout for headphone brands text start-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp">
+
+                        <!--                        textview for headphone brands text start-->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Popular Headphone Brands:"
+                            android:textSize="@dimen/home_section_title"
+                            android:textColor="@color/black"
+                            android:layout_marginLeft="10dp">
+
+                        </TextView>
+                        <!--                        textview for headphone brands text close-->
+
+                    </LinearLayout>
+                    <!--                    linearlayout for headphone brands text close-->
+
+                    <!--                    linearlayout for first line start-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_weight="2">
+
+                        <!--                        cardview for first headphone brands start-->
+                        <androidx.cardview.widget.CardView
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="170dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:elevation="2dp"
+                            app:cardCornerRadius="5dp">
+
+                            <!--                            linearlayout for first headphone brand start-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:weightSum="2">
+
+                                <!--                                imageview for first headphone brand start-->
+                                <ImageView
+                                    android:id="@+id/home_headphone_brand_image_1"
+                                    android:layout_weight="1.7"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_margin="10dp">
+
+                                </ImageView>
+                                <!--                                imageview for first headphone brand close-->
+
+                                <!--                                textview for first headphone brand start-->
+                                <TextView
+                                    android:id="@+id/txt_home_headphone_brand_1"
+                                    android:layout_weight="0.3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="0dp"
+                                    android:layout_gravity="center"
+                                    android:textSize="15sp"
+                                    android:layout_margin="5dp"
+                                    android:textColor="@color/black">
+
+                                </TextView>
+                                <!--                                textview for first headphone brand close-->
+
+                            </LinearLayout>
+                            <!--                            linearlayout for first headphone brand close-->
+
+                        </androidx.cardview.widget.CardView>
+                        <!--                        cardview for first headphone brand close-->
+
+
+                        <!--                        cardview for second headphone brand start-->
+                        <androidx.cardview.widget.CardView
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="170dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:elevation="2dp"
+                            app:cardCornerRadius="5dp">
+
+                            <!--                            linearlayout for second headphone brand start-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:weightSum="2">
+
+                                <!--                                imageview for second headphone brand start-->
+                                <ImageView
+                                    android:id="@+id/home_headphone_brand_image_2"
+                                    android:layout_weight="1.7"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_margin="10dp">
+
+                                </ImageView>
+                                <!--                                imamgeview for second headphone brand close-->
+
+                                <!--                                textview for second headphone brand start-->
+                                <TextView
+                                    android:id="@+id/txt_home_headphone_brand_2"
+                                    android:layout_weight="0.3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="0dp"
+                                    android:layout_gravity="center"
+                                    android:textSize="15sp"
+                                    android:layout_margin="5dp"
+                                    android:textColor="@color/black">
+
+                                </TextView>
+                                <!--                                textview for second headphone brand close-->
+
+                            </LinearLayout>
+                            <!--                            linearlayout for second headphone brand close-->
+
+                        </androidx.cardview.widget.CardView>
+                        <!--                        cardview for second headphone brand close-->
+
+                    </LinearLayout>
+                    <!--                    linearlayout for first line close-->
+
+
+                    <!--                    linearlayout for secondline start-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_weight="2">
+
+                        <!--                        cardview for third headphone brand start-->
+                        <androidx.cardview.widget.CardView
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="170dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginBottom="10dp"
+                            android:elevation="2dp"
+                            app:cardCornerRadius="5dp">
+
+                            <!--                            linearlayout for third smartphone start -->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:weightSum="2">
+
+                                <!--                                imageview for third headphone brand start-->
+                                <ImageView
+                                    android:id="@+id/home_headphone_brand_image_3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1.7"
+                                    android:layout_margin="10dp">
+
+                                </ImageView>
+                                <!--                                imageview for third headphone brand close-->
+
+                                <!--                                textview for thierd headphone brand start-->
+                                <TextView
+                                    android:id="@+id/txt_home_headphone_brand_3"
+                                    android:layout_weight="0.3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="0dp"
+                                    android:layout_gravity="center"
+                                    android:textSize="15sp"
+                                    android:layout_margin="5dp"
+                                    android:textColor="@color/black">
+
+                                </TextView>
+                                <!--                                textview for third headphone brand close-->
+
+                            </LinearLayout>
+                            <!--                            linearlayout for third headphone brand close-->
+
+                        </androidx.cardview.widget.CardView>
+                        <!--                        cardview for third headphone brand close-->
+
+
+                        <!--                        cardview for fourth headphone brand start-->
+                        <androidx.cardview.widget.CardView
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="170dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginBottom="10dp"
+                            android:elevation="2dp"
+                            app:cardCornerRadius="5dp">
+
+                            <!--                            linearlayout for fourth headphone brand start-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:weightSum="2">
+
+                                <!--                                imageview for fourth headphone brand start-->
+                                <ImageView
+                                    android:id="@+id/home_headphone_brand_image_4"
+                                    android:layout_weight="1.7"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_margin="10dp">
+
+                                </ImageView>
+                                <!--                                imageview for fourth headphone brand close-->
+
+                                <!--                                textview for fourth headphone brand start-->
+                                <TextView
+                                    android:id="@+id/txt_home_headphone_brand_4"
+                                    android:layout_weight="0.3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="0dp"
+                                    android:layout_gravity="center"
+                                    android:textSize="15sp"
+                                    android:layout_margin="5dp"
+                                    android:textColor="@color/black">
+
+                                </TextView>
+                                <!--                                textview for fourth headphone brand close-->
+
+                            </LinearLayout>
+                            <!--                            linearlayout for fourth headphone brand close-->
+
+                        </androidx.cardview.widget.CardView>
+                        <!--                        cardview for fourth headphone brand close-->
+
+                    </LinearLayout>
+                    <!--                    linearlayout for fourth headphone brand close-->
+
+                    <!--                    linearlayout for see all text start-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp">
+
+                        <!--                        textview for see all text start-->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="See all"
+                            android:textSize="@dimen/home_section_view_more"
+                            android:textColor="#3F51B5"
+                            android:layout_marginLeft="15dp">
+
+                        </TextView>
+                        <!--                        textview for see all text close-->
+
+                    </LinearLayout>
+                    <!--                    linearlayout for see all text close-->
+
+
+                </LinearLayout>
+                <!--                linearlayout for headphone brand close-->
+
+
+            </androidx.cardview.widget.CardView>
+<!--            cardview for headphone brands close-->
+
+
+<!--            cardview for top ac start-->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+
+                <!--                linearlayout for top ac start-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:background="@color/home_four_items_card_background">
+
+                    <!--                    linearlayout for top ac text start-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp">
+
+                        <!--                        textview for top ac text start-->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Popular Acs from top Brands:"
+                            android:textSize="@dimen/home_section_title"
+                            android:textColor="@color/black"
+                            android:layout_marginLeft="10dp">
+
+                        </TextView>
+                        <!--                        textview for top ac text close-->
+
+                    </LinearLayout>
+                    <!--                    linearlayout for top ac text close-->
+
+                    <!--                    linearlayout for first line start-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_weight="2">
+
+                        <!--                        cardview for first top ac start-->
+                        <androidx.cardview.widget.CardView
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="170dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:elevation="2dp"
+                            app:cardCornerRadius="5dp">
+
+                            <!--                            linearlayout for first top ac start-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:weightSum="2">
+
+                                <!--                                imageview for first headphone brand start-->
+                                <ImageView
+                                    android:id="@+id/home_ac_image_1"
+                                    android:layout_weight="1.7"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_margin="10dp">
+
+                                </ImageView>
+                                <!--                                imageview for first top ac close-->
+
+                                <!--                                textview for first top ac start-->
+                                <TextView
+                                    android:id="@+id/txt_home_ac_1"
+                                    android:layout_weight="0.3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="0dp"
+                                    android:layout_gravity="center"
+                                    android:textSize="15sp"
+                                    android:layout_margin="5dp"
+                                    android:textColor="@color/black">
+
+                                </TextView>
+                                <!--                                textview for first top ac close-->
+
+                            </LinearLayout>
+                            <!--                            linearlayout for first top ac close-->
+
+                        </androidx.cardview.widget.CardView>
+                        <!--                        cardview for first top ac close-->
+
+
+                        <!--                        cardview for second top ac start-->
+                        <androidx.cardview.widget.CardView
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="170dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:elevation="2dp"
+                            app:cardCornerRadius="5dp">
+
+                            <!--                            linearlayout for second top ac start-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:weightSum="2">
+
+                                <!--                                imageview for second top ac start-->
+                                <ImageView
+                                    android:id="@+id/home_ac_image_2"
+                                    android:layout_weight="1.7"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_margin="10dp">
+
+                                </ImageView>
+                                <!--                                imamgeview for second top ac close-->
+
+                                <!--                                textview for second top ac start-->
+                                <TextView
+                                    android:id="@+id/txt_home_ac_2"
+                                    android:layout_weight="0.3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="0dp"
+                                    android:layout_gravity="center"
+                                    android:textSize="15sp"
+                                    android:layout_margin="5dp"
+                                    android:textColor="@color/black">
+
+                                </TextView>
+                                <!--                                textview for second top ac close-->
+
+                            </LinearLayout>
+                            <!--                            linearlayout for second top ac close-->
+
+                        </androidx.cardview.widget.CardView>
+                        <!--                        cardview for second top ac close-->
+
+                    </LinearLayout>
+                    <!--                    linearlayout for first line close-->
+
+
+                    <!--                    linearlayout for secondline start-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_weight="2">
+
+                        <!--                        cardview for third top ac start-->
+                        <androidx.cardview.widget.CardView
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="170dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginBottom="10dp"
+                            android:elevation="2dp"
+                            app:cardCornerRadius="5dp">
+
+                            <!--                            linearlayout for third top ac start -->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:weightSum="2">
+
+                                <!--                                imageview for third top ac start-->
+                                <ImageView
+                                    android:id="@+id/home_ac_image_3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1.7"
+                                    android:layout_margin="10dp">
+
+                                </ImageView>
+                                <!--                                imageview for third top ac close-->
+
+                                <!--                                textview for thierd top ac start-->
+                                <TextView
+                                    android:id="@+id/txt_home_ac_3"
+                                    android:layout_weight="0.3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="0dp"
+                                    android:layout_gravity="center"
+                                    android:textSize="15sp"
+                                    android:layout_margin="5dp"
+                                    android:textColor="@color/black">
+
+                                </TextView>
+                                <!--                                textview for third top ac close-->
+
+                            </LinearLayout>
+                            <!--                            linearlayout for third top ac close-->
+
+                        </androidx.cardview.widget.CardView>
+                        <!--                        cardview for third top ac close-->
+
+
+                        <!--                        cardview for fourth top ac start-->
+                        <androidx.cardview.widget.CardView
+                            android:layout_weight="1"
+                            android:layout_width="0dp"
+                            android:layout_height="170dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginBottom="10dp"
+                            android:elevation="2dp"
+                            app:cardCornerRadius="5dp">
+
+                            <!--                            linearlayout for fourth top ac start-->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:weightSum="2">
+
+                                <!--                                imageview for fourth top ac start-->
+                                <ImageView
+                                    android:id="@+id/home_ac_image_4"
+                                    android:layout_weight="1.7"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_margin="10dp">
+
+                                </ImageView>
+                                <!--                                imageview for fourth top ac close-->
+
+                                <!--                                textview for fourth top ac start-->
+                                <TextView
+                                    android:id="@+id/txt_home_ac_4"
+                                    android:layout_weight="0.3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="0dp"
+                                    android:layout_gravity="center"
+                                    android:textSize="15sp"
+                                    android:layout_margin="5dp"
+                                    android:textColor="@color/black">
+
+                                </TextView>
+                                <!--                                textview for fourth top ac close-->
+
+                            </LinearLayout>
+                            <!--                            linearlayout for fourth top ac close-->
+
+                        </androidx.cardview.widget.CardView>
+                        <!--                        cardview for fourth top ac close-->
+
+                    </LinearLayout>
+                    <!--                    linearlayout for fourth top ac close-->
+
+
+
+                    <!--                    linearlayout for see all text start-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <!--                        textview for see all text start-->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="See all"
+                            android:textSize="@dimen/home_section_view_more"
+                            android:textColor="#3F51B5"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginBottom="5dp">
+
+                        </TextView>
+                        <!--                        textview for see all text close-->
+
+                    </LinearLayout>
+                    <!--                    linearlayout for see all text close-->
+
+
+                </LinearLayout>
+                <!--                linearlayout for top ac close-->
+
+
+            </androidx.cardview.widget.CardView>
+<!--            cardview for top ac close-->
+
+
+<!--            cardview for grocery start-->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+
+                <!--                linearlayout for grocery start-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:background="@color/home_four_items_card_background">
+
+                    <!--                    linearlayout for grocery text start-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp">
+
+                        <!--                        textview for grocery text start-->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Grocery Products:"
+                            android:textSize="@dimen/home_section_title"
+                            android:textColor="@color/black"
+                            android:layout_marginLeft="10dp">
+
+                        </TextView>
+                        <!--                        textview for grocery text close-->
+
+                    </LinearLayout>
+                    <!--                    linearlayout for grocery text close-->
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_weight="2">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/user_home_grocery_recyclerview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:nestedScrollingEnabled="false">
+
+                        </androidx.recyclerview.widget.RecyclerView>
+
+
+                    </LinearLayout>
+
+                    <!--                    linearlayout for see all text start-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <!--                        textview for see all text start-->
+                        <TextView
+                            android:id="@+id/txt_grocery_see_all"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="See all"
+                            android:textSize="@dimen/home_section_view_more"
+                            android:textColor="#3F51B5"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginBottom="5dp">
+
+                        </TextView>
+                        <!--                        textview for see all text close-->
+
+                    </LinearLayout>
+                    <!--                    linearlayout for see all text close-->
+
+
+                </LinearLayout>
+                <!--                linearlayout for grocery close-->
+
+
+            </androidx.cardview.widget.CardView>
+<!--            cardview for grocery close-->
+
+
+
+
+
+        </LinearLayout>
+<!--        linearlayout for display home close-->
+
+    </androidx.core.widget.NestedScrollView>
+<!--    scrollview for home layout close-->
+
+
+</LinearLayout>
+<!--linearlayout for home fragment close-->

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--linearlayout for show users start-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/screen_background"
+    android:orientation="vertical"
+    tools:context=".Admin_Section.ShowUser">
+
+<!--    toolbar for show users start-->
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/toolbar_white">
+
+<!--        imageview for show users back button start-->
+        <ImageView
+            android:id="@+id/btn_admin_show_user_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back_arrow_white"
+            android:padding="5dp"
+            android:layout_marginTop="12dp">
+
+        </ImageView>
+<!--        imageview for show user back button close-->
+
+<!--        textview for show user text start-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Show Users"
+            android:textSize="25sp"
+            android:textColor="@color/toolbar_title_color"
+            android:layout_marginLeft="10dp">
+
+        </TextView>
+<!--        textview for show user text close-->
+
+    </androidx.appcompat.widget.Toolbar>
+<!--    toolbar for show user close-->
+
+
+<!--    linear layout for show users content start-->
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="match_parent">
+
+         <androidx.recyclerview.widget.RecyclerView
+             android:id="@+id/show_user_recycler_view"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+              android:layout_marginTop="10dp">
+
+         </androidx.recyclerview.widget.RecyclerView>
+
+     </LinearLayout>
+<!--    linearlayout for show users contnet close-->
+
+
+</LinearLayout>
+<!--linearlayout for show user close-->

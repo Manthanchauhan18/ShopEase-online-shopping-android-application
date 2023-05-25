@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".categories.User_home_category_grocery"
+    android:orientation="vertical"
+    android:background="@color/screen_background">
+
+
+    <!--    toolbar for add category start-->
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/toolbar_white"
+        app:contentInsetStart="0dp"
+        app:contentInsetStartWithNavigation="0dp"
+        android:elevation="2dp">
+
+        <!--        imageview for add category back button start-->
+        <ImageView
+            android:id="@+id/btn_user_grocery_category_back_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back_arrow_white"
+            android:padding="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp">
+
+        </ImageView>
+        <!--        imageview for add category back button close-->
+
+        <!--        textview for add category text close-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Grocery"
+            android:textSize="@dimen/toolbar_title"
+            android:textColor="@color/toolbar_title_color"
+            android:layout_marginLeft="5dp">
+
+        </TextView>
+        <!--        textview for add category text close-->
+
+    </androidx.appcompat.widget.Toolbar>
+    <!--    toolbar for add category close-->
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:elevation="2dp">
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/category_grocery_searchview"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/category_seachview_background"
+            app:defaultQueryHint="Search Product"
+            app:iconifiedByDefault="false"
+            android:layout_marginLeft="15dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="15dp"
+            app:queryBackground="@null"
+            app:searchIcon="@drawable/search_icon">
+
+        </androidx.appcompat.widget.SearchView>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:scrollbars="none"
+        android:fillViewport="true"
+        android:clipToPadding="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <com.google.android.material.chip.ChipGroup
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.chip.Chip
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Fruits and vegetables"
+                                android:textSize="@dimen/category_chip_text">
+
+                            </com.google.android.material.chip.Chip>
+                            <com.google.android.material.chip.Chip
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Atta and Dals"
+                                android:textSize="@dimen/category_chip_text">
+
+                            </com.google.android.material.chip.Chip>
+                            <com.google.android.material.chip.Chip
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Dry Fruits,Oils and Masala"
+                                android:textSize="@dimen/category_chip_text">
+
+                            </com.google.android.material.chip.Chip>
+                            <com.google.android.material.chip.Chip
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Dairy,Bread and Eggs"
+                                android:textSize="@dimen/category_chip_text">
+
+                            </com.google.android.material.chip.Chip>
+                            <com.google.android.material.chip.Chip
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Instant Food"
+                                android:textSize="@dimen/category_chip_text">
+
+                            </com.google.android.material.chip.Chip>
+                            <com.google.android.material.chip.Chip
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Chocolates and Deserts"
+                                android:textSize="@dimen/category_chip_text">
+
+                            </com.google.android.material.chip.Chip>
+                            <com.google.android.material.chip.Chip
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Munchies"
+                                android:textSize="@dimen/category_chip_text">
+
+                            </com.google.android.material.chip.Chip>
+                            <com.google.android.material.chip.Chip
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Cold Drinks and Juices"
+                                android:textSize="@dimen/category_chip_text">
+
+                            </com.google.android.material.chip.Chip>
+                            <com.google.android.material.chip.Chip
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Cereals and Breakfast"
+                                android:textSize="@dimen/category_chip_text">
+
+                            </com.google.android.material.chip.Chip>
+                            <com.google.android.material.chip.Chip
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Sauces and Spreads"
+                                android:textSize="@dimen/category_chip_text">
+
+                            </com.google.android.material.chip.Chip>
+                            <com.google.android.material.chip.Chip
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Tea,Coffee and More"
+                                android:textSize="@dimen/category_chip_text">
+
+                            </com.google.android.material.chip.Chip>
+                            <com.google.android.material.chip.Chip
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Biscuits"
+                                android:textSize="@dimen/category_chip_text">
+
+                            </com.google.android.material.chip.Chip>
+                            <com.google.android.material.chip.Chip
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Bath,Body and Hair"
+                                android:textSize="@dimen/category_chip_text">
+
+                            </com.google.android.material.chip.Chip>
+                            <com.google.android.material.chip.Chip
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Cleaning Essentials"
+                                android:textSize="@dimen/category_chip_text">
+
+                            </com.google.android.material.chip.Chip>
+                            <com.google.android.material.chip.Chip
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Beauty and Grooming"
+                                android:textSize="@dimen/category_chip_text">
+
+                            </com.google.android.material.chip.Chip>
+                            <com.google.android.material.chip.Chip
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Home and Kitchen Needs"
+                                android:textSize="@dimen/category_chip_text">
+
+                            </com.google.android.material.chip.Chip>
+                            <com.google.android.material.chip.Chip
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Baby Care"
+                                android:textSize="@dimen/category_chip_text">
+
+                            </com.google.android.material.chip.Chip>
+                            <com.google.android.material.chip.Chip
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Pet Supplies"
+                                android:textSize="@dimen/category_chip_text">
+
+                            </com.google.android.material.chip.Chip>
+
+
+
+                        </com.google.android.material.chip.ChipGroup>
+
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+
+
+            </LinearLayout>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/user_grocery_category_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:nestedScrollingEnabled="false"
+                android:overScrollMode="never">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--linearlayout for add category start-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Admin_Section.Add_category"
+    android:orientation="vertical"
+    android:background="@color/screen_background">
+
+
+    <!--    toolbar for add category start-->
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/toolbar_white"
+        android:elevation="2dp"
+        app:contentInsetStart="0dp"
+        app:contentInsetStartWithNavigation="0dp">
+
+        <!--        imageview for add category back button start-->
+        <ImageView
+            android:id="@+id/btn_admin_add_category_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back_arrow_white"
+            android:padding="5dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="10dp">
+
+        </ImageView>
+        <!--        imageview for add category back button close-->
+
+        <!--        textview for add category text close-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Category"
+            android:textSize="@dimen/toolbar_title"
+            android:textColor="@color/toolbar_title_color"
+            android:layout_marginLeft="10dp">
+
+        </TextView>
+        <!--        textview for add category text close-->
+
+    </androidx.appcompat.widget.Toolbar>
+    <!--    toolbar for add category close-->
+
+
+
+    <!--    cardview for add category content start-->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardCornerRadius="10dp"
+        android:layout_margin="10dp">
+
+        <!--        linearlayout for add category content start-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/cardview_white">
+
+            <!--            linearlayout for add category input start-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="10dp">
+
+                <!--                edittext for category name start-->
+                <EditText
+                    android:id="@+id/edit_admin_add_category_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Name of the Category"
+                    android:textSize="20sp"
+                    android:textColor="#000000"
+                    android:layout_margin="10dp"
+                    android:padding="10dp"
+                    android:background="@drawable/addgroceryroundedbutton">
+
+                </EditText>
+                <!--                edittext for category name close-->
+
+                <!--                button for select category image start-->
+                <Button
+                    android:id="@+id/btn_admin_add_category_select_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Select Image of Category"
+                    android:textColor="#FFFFFF"
+                    android:textAllCaps="false"
+                    android:background="@color/black"
+                    android:layout_margin="10dp"
+                    android:textSize="20dp">
+
+                </Button>
+                <!--                button for select category image close-->
+
+                <!--                textview for add category error message start-->
+                <TextView
+                    android:id="@+id/txt_add_category_error"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:textSize="15sp"
+                    android:textColor="@color/black">
+
+                </TextView>
+                <!--                textview for add category error message close-->
+
+
+            </LinearLayout>
+            <!--            linearlayout for add category input close-->
+
+
+
+            <!--            linearlayout for add category button start-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="10dp">
+
+                <!--                button for add category start-->
+                <Button
+                    android:id="@+id/btn_admin_add_category"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFFFFF"
+                    android:text="Add Category"
+                    android:textAllCaps="false"
+                    android:background="@color/black"
+                    android:layout_margin="10dp"
+                    android:textSize="20dp">
+
+                </Button>
+                <!--                button for add category close-->
+
+            </LinearLayout>
+            <!--            linearlayout for add category button close-->
+
+
+            <!--            progressbar for add category start-->
+            <ProgressBar
+                android:id="@+id/admin_add_category_progressbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="?android:attr/progressBarStyle"
+                android:scaleX=".5"
+                android:scaleY=".5"
+                android:layout_gravity="center">
+
+
+            </ProgressBar>
+            <!--            progressbar for add category close-->
+
+
+        </LinearLayout>
+        <!--        linearlayout for add category content close-->
+
+    </androidx.cardview.widget.CardView>
+    <!--    cardview for add category content close-->
+
+
+
+</LinearLayout>
+<!--linearlayout for add category close-->

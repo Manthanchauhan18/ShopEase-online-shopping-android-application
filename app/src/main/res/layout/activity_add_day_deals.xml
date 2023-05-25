@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--linearlayout for add day deals start-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Admin_Section.Add_day_deals"
+    android:orientation="vertical"
+    android:background="@color/screen_background">
+
+
+    <!--    toolbar for add day deals start-->
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/toolbar_white"
+        android:elevation="2dp"
+        app:contentInsetStart="0dp"
+        app:contentInsetStartWithNavigation="0dp">
+
+        <!--        imageview for add day deals back button start-->
+        <ImageView
+            android:id="@+id/btn_admin_add_day_deals_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back_arrow_white"
+            android:padding="5dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="10dp">
+
+        </ImageView>
+        <!--        imageview for add day deals back button close-->
+
+        <!--        textview for add day deals text close-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Day Deals"
+            android:textSize="@dimen/toolbar_title"
+            android:textColor="@color/toolbar_title_color"
+            android:layout_marginLeft="10dp">
+
+        </TextView>
+        <!--        textview for add day deals text close-->
+
+    </androidx.appcompat.widget.Toolbar>
+    <!--    toolbar for add day deals close-->
+
+
+
+    <!--    cardview for add day deals content start-->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardCornerRadius="10dp"
+        android:layout_margin="10dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!--        linearlayout for add upcoming smartphone content start-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@color/white">
+
+
+                <!--        linearlayout for add day deals content start-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:background="@color/cardview_white">
+
+                    <!--            linearlayout for add day deals input start-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_margin="10dp">
+
+                        <!--                edittext for day deals name start-->
+                        <EditText
+                            android:id="@+id/edit_admin_add_day_deals_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Name of the Deal"
+                            android:textSize="20sp"
+                            android:textColor="#000000"
+                            android:layout_margin="10dp"
+                            android:padding="10dp"
+                            android:background="@drawable/addgroceryroundedbutton">
+
+                        </EditText>
+                        <!--                edittext for day deals name close-->
+
+                        <!--                edittext for day deals name start-->
+                        <EditText
+                            android:id="@+id/edit_admin_add_day_deals_price"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Price of the deal product"
+                            android:textSize="20sp"
+                            android:textColor="#000000"
+                            android:layout_margin="10dp"
+                            android:padding="10dp"
+                            android:background="@drawable/addgroceryroundedbutton">
+
+                        </EditText>
+                        <!--                edittext for day deals name close-->
+
+
+                        <!--                edittext for day deals name start-->
+                        <EditText
+                            android:id="@+id/edit_admin_add_day_deals_rating"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="rating of the deal product"
+                            android:textSize="20sp"
+                            android:textColor="#000000"
+                            android:layout_margin="10dp"
+                            android:padding="10dp"
+                            android:background="@drawable/addgroceryroundedbutton">
+
+                        </EditText>
+                        <!--                edittext for day deals name close-->
+
+
+                        <!--                edittext for day deals name start-->
+                        <EditText
+                            android:id="@+id/edit_admin_add_day_deals_stock"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="stock of the deal product"
+                            android:textSize="20sp"
+                            android:inputType="number"
+                            android:textColor="#000000"
+                            android:layout_margin="10dp"
+                            android:padding="10dp"
+                            android:background="@drawable/addgroceryroundedbutton">
+
+                        </EditText>
+                        <!--                edittext for day deals name close-->
+
+                        <!--                edittext for day deals name start-->
+                        <EditText
+                            android:id="@+id/edit_admin_add_day_deals_percentage"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Discount Percentage"
+                            android:textSize="20sp"
+                            android:inputType="number"
+                            android:textColor="#000000"
+                            android:layout_margin="10dp"
+                            android:padding="10dp"
+                            android:background="@drawable/addgroceryroundedbutton">
+
+                        </EditText>
+                        <!--                edittext for day deals name close-->
+
+
+                        <EditText
+                            android:id="@+id/edit_admin_add_deals_of_the_day_discription"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:inputType="textMultiLine"
+                            android:background="@drawable/addgroceryroundedbutton"
+                            android:hint="Product Discription"
+                            android:padding="10dp"
+                            android:textSize="20sp"
+                            android:gravity="top"
+                            android:lines="10"
+                            android:minLines="4"
+                            android:maxLines="10"
+                            android:scrollbars="vertical" />
+
+                        <!--                button for select day deals image start-->
+                        <Button
+                            android:id="@+id/btn_admin_add_day_deals_select_image"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Select Image of Deal"
+                            android:textColor="#FFFFFF"
+                            android:textAllCaps="false"
+                            android:background="@color/black"
+                            android:layout_margin="10dp"
+                            android:textSize="@dimen/admin_add_button_text">
+
+                        </Button>
+                        <!--                button for select day deals image close-->
+
+                        <!--                textview for add day deals error message start-->
+                        <TextView
+                            android:id="@+id/txt_add_day_deals_error"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:textSize="@dimen/error_messege"
+                            android:textColor="@color/black">
+
+                        </TextView>
+                        <!--                textview for add day deals error message close-->
+
+
+                    </LinearLayout>
+                    <!--            linearlayout for add day deals input close-->
+
+
+
+                    <!--            linearlayout for add day deals button start-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_margin="10dp">
+
+                        <!--                button for add day deals start-->
+                        <Button
+                            android:id="@+id/btn_admin_add_day_deals"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="#FFFFFF"
+                            android:text="Add Day Deal"
+                            android:textAllCaps="false"
+                            android:background="@color/black"
+                            android:layout_margin="10dp"
+                            android:textSize="@dimen/admin_add_button_text">
+
+                        </Button>
+                        <!--                button for add day deals close-->
+
+                    </LinearLayout>
+                    <!--            linearlayout for add day deals button close-->
+
+
+                    <!--            progressbar for add day deals start-->
+                    <ProgressBar
+                        android:id="@+id/admin_add_day_deals_progressbar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        style="?android:attr/progressBarStyle"
+                        android:scaleX=".5"
+                        android:scaleY=".5"
+                        android:layout_gravity="center">
+
+
+                    </ProgressBar>
+                    <!--            progressbar for add day deals close-->
+
+
+                </LinearLayout>
+                <!--        linearlayout for add day deals content close-->
+
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+    </androidx.cardview.widget.CardView>
+    <!--    cardview for add day deals content close-->
+
+
+</LinearLayout>
+<!--linearlayout for add day deals close-->

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Admin_Section.Delete_electronic"
+    android:orientation="vertical"
+    android:background="@color/screen_background">
+
+    <!--    toolbar for delete upcoming startphone start-->
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/toolbar_white"
+        android:elevation="2dp"
+        app:contentInsetStart="0dp"
+        app:contentInsetStartWithNavigation="0dp">
+
+        <!--        imageview for delete upcoming smartphone back button start-->
+        <ImageView
+            android:id="@+id/btn_admin_Delete_electronics_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back_arrow_white"
+            android:padding="5dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="10dp">
+
+        </ImageView>
+        <!--        iamgeview for delete upcoming smartphone back button close-->
+
+        <!--        textview for delete upcoming smartphone text start-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delete Electronic Product"
+            android:textSize="25sp"
+            android:textColor="@color/toolbar_title_color"
+            android:layout_marginLeft="10dp">
+
+        </TextView>
+        <!--        textview fro delete upcoming smartphone text close-->
+
+    </androidx.appcompat.widget.Toolbar>
+    <!--    toolbar for delete upcoming smartphone close-->
+
+
+
+    <!--    cardview for delete upcoming smartphone content start-->
+    <androidx.cardview.widget.CardView
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        app:cardCornerRadius="10dp"
+        android:layout_margin="10dp"
+        android:background="@color/white">
+
+        <!--        linearlayout for delete upcoming smartphone content start-->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:layout_margin="10dp">
+
+            <!--            linearlayout for delete upcoming smartphone input section start-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!--                textview for delete upcoming smartphone name start-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Select Electronic Product:"
+                    android:textSize="20dp"
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="20dp">
+
+                </TextView>
+                <!--                textview for delete upcoming smartphone name close-->
+
+                <!--                linearlayout for spinner start-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/addgroceryroundedbutton"
+                    android:layout_margin="10dp">
+
+                    <!--                    spinner start-->
+                    <Spinner
+                        android:id="@+id/spinner_admin_delete_electronics"
+                        android:layout_height="match_parent"
+                        android:layout_width="match_parent"
+                        android:layout_margin="10dp">
+                    </Spinner>
+                    <!--                    spinner close-->
+
+                    <!--                    textview for delete upcoming smartphone error message start-->
+                    <TextView
+                        android:id="@+id/txt_delete_electronics_error"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:textSize="15sp"
+                        android:textColor="@color/black"
+                        android:layout_marginRight="10dp">
+
+                    </TextView>
+                    <!--                    textview for delete upcoming smartphone error message close-->
+
+                </LinearLayout>
+                <!--                linearlayout for spinner close-->
+
+
+            </LinearLayout>
+            <!--            linearlayout for delete upcoming smartphone input close-->
+
+
+            <!--            button for delete upcoming smartphone start-->
+            <Button
+                android:id="@+id/btn_admin_delete_electronics"
+                android:background="#000000"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:fontFamily="sans-serif"
+                android:textAllCaps="false"
+                android:textSize="20dp"
+                android:textColor="#FFFFFF"
+                android:text="Delete Electronic Product"
+                android:layout_marginHorizontal="20dp"
+                android:maxHeight="15dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp">
+
+            </Button>
+            <!--            button for delete upcoming smartphone close-->
+
+            <!--            progressbar for delete upcoming smartphone start-->
+            <ProgressBar
+                android:id="@+id/admin_delete_electronics_progressbar"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                style="@style/Base.CardView"
+                android:scaleX=".5"
+                android:scaleY=".5"
+                android:layout_marginTop="30dp">
+
+
+            </ProgressBar>
+            <!--            progressbar for delete upcoming smartphone close-->
+
+        </LinearLayout>
+        <!--        linearlayout for delete upcoming smartphone content close-->
+
+    </androidx.cardview.widget.CardView>
+    <!--    cardview for delete upcoming smartphone content close-->
+
+
+</LinearLayout>

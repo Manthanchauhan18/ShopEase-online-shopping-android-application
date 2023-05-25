@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ShopEase</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="toggle_password">Toggle password visibility</string>
+    <string name="rupee">\u20B9</string>
+</resources>

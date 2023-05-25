@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="home_section_title">17sp</dimen>
+    <dimen name="toolbar_title">30sp</dimen>
+    <dimen name="home_section_view_more">15sp</dimen>
+    <dimen name="category_chip_text">15sp</dimen>
+    <dimen name="error_messege">15sp</dimen>
+
+    <dimen name="admin_add_button_text">20sp</dimen>
+    <dimen name="admin_home_button_text">15sp</dimen>
+    <dimen name="admin_section_title">20sp</dimen>
+
+    <dimen name="hello">20sp</dimen>
+
+</resources>

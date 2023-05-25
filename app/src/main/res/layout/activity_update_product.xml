@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--linearlayout for update product start-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Admin_Section.Update_Product"
+    android:orientation="vertical"
+    android:background="@color/screen_background">
+
+<!--    toolbar for update product start-->
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/toolbar_white">
+
+<!--        imageview for update product back button start-->
+        <ImageView
+            android:id="@+id/btn_admin_update_product_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back_arrow_white"
+            android:padding="5dp"
+            android:layout_marginTop="12dp">
+
+        </ImageView>
+<!--        imageview for update product back button close-->
+
+<!--        textview for update product text start-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Update Product"
+            android:textSize="@dimen/toolbar_title"
+            android:textColor="@color/toolbar_title_color"
+            android:layout_marginLeft="10dp">
+
+        </TextView>
+<!--        textview for update product text close-->
+
+    </androidx.appcompat.widget.Toolbar>
+<!--    toolbar for update product close-->
+
+
+<!--    cardview for update product content start-->
+    <androidx.cardview.widget.CardView
+    android:background="#5D6D7E"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="10dp"
+    android:layout_margin="10dp">
+
+<!--        linearlayout for update image content start-->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent">
+
+<!--            linearlayout for update image input start-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="10dp">
+
+<!--                linearlayout for spinner start-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/addgroceryroundedbutton"
+                    android:layout_margin="10dp">
+
+<!--                    spinner start-->
+                    <Spinner
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
+                        android:layout_margin="10dp"
+                        android:id="@+id/spAdUp">
+                    </Spinner>
+<!--                    spinner close-->
+
+                </LinearLayout>
+<!--                linearlayout for spinner close-->
+
+<!--                edittext for name start-->
+                <EditText
+                    android:id="@+id/etAdUpname"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:gravity="center_vertical"
+                    android:textSize="20dp"
+                    android:background="@drawable/addgroceryroundedbutton"
+                    android:textColor="#000000"
+                    android:layout_margin="10dp"
+                    android:padding="10dp"
+                    android:hint="Name"
+                    android:focusableInTouchMode="false">
+
+                </EditText>
+<!--                edittext for name close-->
+
+<!--                edittext for price start-->
+                <EditText
+                    android:id="@+id/etAdUpprice"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:background="@drawable/addgroceryroundedbutton"
+                    android:gravity="center_vertical"
+                    android:textSize="20dp"
+                    android:textColor="#000000"
+                    android:hint="Price"
+                    android:padding="10dp"
+                    android:layout_margin="10dp">
+
+                </EditText>
+<!--                edittext for price close-->
+
+<!--                edittext for stock start-->
+                <EditText
+                    android:id="@+id/etAdUpstock"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:background="@drawable/addgroceryroundedbutton"
+                    android:gravity="center_vertical"
+                    android:textSize="20dp"
+                    android:textColor="#000000"
+                    android:hint="Stock"
+                    android:padding="10dp"
+                    android:layout_margin="10dp">
+
+
+                </EditText>
+<!--                edittext fro stock close-->
+
+<!--                button for update image button start-->
+                <Button
+                    android:id="@+id/btAdUpUpimage"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:background="#000000"
+                    android:fontFamily="sans-serif"
+                    android:textAllCaps="false"
+                    android:textSize="20dp"
+                    android:textColor="#FFFFFF"
+                    android:text="Update Image"
+                    android:layout_margin="10dp">
+                </Button>
+<!--                button for update image button close-->
+
+<!--                textview for update product error-->
+                <TextView
+                    android:id="@+id/txt_update_product_error"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textSize="15sp">
+
+                </TextView>
+<!--                textview for update product error-->
+
+            </LinearLayout>
+<!--            linealayout for input close-->
+
+
+<!--            linearlayout for update product button start-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+
+<!--                button for update product start-->
+                <Button
+                    android:id="@+id/btAdUpUpgrocery"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:background="#000000"
+                    android:textAllCaps="false"
+                    android:textSize="20dp"
+                    android:textColor="#FFFFFF"
+                    android:text="Update Product"
+                    android:layout_margin="10dp">
+
+                </Button>
+<!--                button for update produtct close-->
+
+            </LinearLayout>
+<!--            linearlayout for update project button close-->
+
+<!--            progressbar for update product start-->
+            <ProgressBar
+                android:id="@+id/pbAdUp"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_margin="10dp"
+                style="@style/Base.CardView"
+                android:scaleY=".5"
+                android:scaleX=".5">
+
+            </ProgressBar>
+<!--            progressbar for update product close-->
+
+
+        </LinearLayout>
+<!--        linearlayout for update product content close-->
+
+    </androidx.cardview.widget.CardView>
+<!--    cardview for update product content close-->
+
+
+
+</LinearLayout>
+<!--linearlayout for update product close-->

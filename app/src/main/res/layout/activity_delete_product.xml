@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--linearlayout for delete product start-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Admin_Section.Delete_Product"
+    android:orientation="vertical"
+    android:background="@color/screen_background">
+
+
+<!--    toolbar for delete product start-->
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/toolbar_white"
+        android:elevation="2dp"
+        app:contentInsetStart="0dp"
+        app:contentInsetStartWithNavigation="0dp">
+
+<!--        imageview for delete product back start-->
+        <ImageView
+            android:id="@+id/btn_admin_Delete_product_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back_arrow_white"
+            android:padding="5dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="10dp">
+
+        </ImageView>
+<!--        iamgeview for delete product back close-->
+
+<!--        textview for delete product text start-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delete Product"
+            android:textSize="@dimen/toolbar_title"
+            android:textColor="@color/toolbar_title_color"
+            android:layout_marginLeft="10dp">
+
+        </TextView>
+<!--        textview for delete product text close-->
+
+    </androidx.appcompat.widget.Toolbar>
+<!--    toolbar for delete product close-->
+
+
+
+<!--    cardview for delete product content start-->
+    <androidx.cardview.widget.CardView
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        app:cardCornerRadius="10dp"
+        android:layout_margin="10dp"
+        android:background="@color/white">
+
+<!--        liinearlayout for delete product conetent start-->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:layout_margin="10dp">
+
+<!--            linearlayout for product details input start-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+<!--                textview for select product text start-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Select Product:"
+                    android:textSize="20dp"
+                    android:textColor="@color/black"
+                    android:layout_marginLeft="20dp">
+
+                </TextView>
+<!--                textview for select product text close-->
+
+<!--                linearlayout for spinner start-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/addgroceryroundedbutton"
+                    android:layout_margin="10dp">
+
+<!--                    spinner start-->
+                    <Spinner
+                        android:layout_height="match_parent"
+                        android:layout_width="match_parent"
+                        android:layout_margin="10dp"
+                        android:id="@+id/SpAdDel">
+                    </Spinner>
+<!--                    spinner close-->
+
+                </LinearLayout>
+<!--                linearlayout for spinner close-->
+
+<!--                edittext for name start-->
+                <EditText
+                    android:id="@+id/etAdDelname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:fontFamily="sans-serif"
+                    android:textSize="20dp"
+                    android:background="@drawable/addgroceryroundedbutton"
+                    android:textColor="#000000"
+                    android:padding="10dp"
+                    android:layout_margin="10dp"
+                    android:hint="Name"
+                    android:focusableInTouchMode="false">
+
+                </EditText>
+<!--                edittext for name close-->
+
+<!--                edittext for price start-->
+                <EditText
+                    android:background="@drawable/addgroceryroundedbutton"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:gravity="center_vertical"
+                    android:fontFamily="sans-serif"
+                    android:textSize="20dp"
+                    android:textColor="#000000"
+                    android:layout_marginHorizontal="10dp"
+                    android:id="@+id/etAdDelprice"
+                    android:padding="10dp"
+                    android:layout_marginVertical="10dp"
+                    android:hint="Price"
+                    android:focusableInTouchMode="false">
+
+                </EditText>
+<!--                edittext for price close-->
+
+                <TextView
+                    android:id="@+id/txt_delete_product_error"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:textColor="@color/black"
+                    android:layout_marginRight="10dp"
+                    android:layout_gravity="end">
+
+                </TextView>
+
+
+            </LinearLayout>
+<!--            linearlayout for product detail input close-->
+
+
+<!--            button for delete product start-->
+            <Button
+                android:id="@+id/btAdDelProduct"
+                android:background="#000000"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:fontFamily="sans-serif"
+                android:textAllCaps="false"
+                android:textSize="20dp"
+                android:textColor="#FFFFFF"
+                android:text="Delete Product"
+                android:layout_marginHorizontal="20dp"
+                android:maxHeight="15dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp">
+
+            </Button>
+<!--            button for delete product close-->
+
+<!--            progressbar for delete product start-->
+            <ProgressBar
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:id="@+id/PbAdDel"
+                style="@style/Base.CardView"
+                android:scaleX=".5"
+                android:scaleY=".5"
+                android:layout_marginTop="30dp">
+
+
+            </ProgressBar>
+<!--            progressbar for delete product close-->
+
+
+
+        </LinearLayout>
+<!--        linearlayout for delete product content close-->
+
+    </androidx.cardview.widget.CardView>
+<!--    cardview for delete product content close-->
+
+
+</LinearLayout>
+<!--linearlayour for delete product close-->

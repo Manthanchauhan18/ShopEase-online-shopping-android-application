@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.Profile.ProfileFragment"
+    android:orientation="vertical"
+    android:background="@color/screen_background">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/toolbar_white"
+        app:contentInsetStart="0dp"
+        app:contentInsetStartWithNavigation="0dp"
+        android:elevation="2dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Profile"
+            android:textSize="@dimen/toolbar_title"
+            android:textColor="@color/toolbar_title_color"
+            android:layout_marginLeft="15dp"
+            android:textStyle="bold">
+
+        </TextView>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="2dp">
+
+                <TextView
+                    android:id="@+id/txt_profile_username"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hello,"
+                    android:layout_marginLeft="20dp"
+                    android:padding="5dp"
+                    android:textSize="@dimen/hello"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="5dp">
+
+                </TextView>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@color/cardview_white">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:elevation="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <Button
+                            android:id="@+id/user_profile_btn_orders"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Orders"
+                            android:textColor="@color/white"
+                            android:textSize="18sp"
+                            android:textAllCaps="false"
+                            android:background="@drawable/btn_buy_product"
+                            android:drawableLeft="@drawable/package_white_32"
+                            android:padding="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginBottom="5dp">
+
+                        </Button>
+
+                        <Button
+                            android:id="@+id/user_profile_btn_wishlist"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Wishlist"
+                            android:textColor="@color/white"
+                            android:textSize="18sp"
+                            android:textAllCaps="false"
+                            android:background="@drawable/btn_buy_product"
+                            android:drawableLeft="@drawable/heart_white_32"
+                            android:padding="10dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginBottom="5dp">
+
+                        </Button>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <Button
+                            android:id="@+id/user_profile_btn_coupons"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Coupons"
+                            android:textColor="@color/white"
+                            android:textSize="18sp"
+                            android:textAllCaps="false"
+                            android:background="@drawable/btn_buy_product"
+                            android:drawableLeft="@drawable/gift_box_white_32"
+                            android:padding="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginBottom="10dp">
+
+                        </Button>
+
+                        <Button
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Help Center"
+                            android:textColor="@color/white"
+                            android:textSize="18sp"
+                            android:textAllCaps="false"
+                            android:background="@drawable/btn_buy_product"
+                            android:drawableLeft="@drawable/help_center_white_32"
+                            android:padding="10dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginBottom="10dp">
+
+                        </Button>
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:elevation="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Account Settings:"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"
+                            android:layout_marginLeft="10dp">
+
+                        </TextView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/text_profile_edit_profile"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Edit Profile"
+                            android:fontFamily="@font/lato_regular"
+                            android:textColor="@color/black"
+                            android:drawableLeft="@drawable/edit_profile"
+                            android:drawableRight="@drawable/right_arrow"
+                            android:drawablePadding="10dp"
+                            android:padding="10dp"
+                            android:textSize="18sp">
+
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/text_profile_saved_cards"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Saved Cards &amp; Wallet"
+                            android:fontFamily="@font/lato_regular"
+                            android:textColor="@color/black"
+                            android:drawableLeft="@drawable/wallet"
+                            android:drawableRight="@drawable/right_arrow"
+                            android:drawablePadding="10dp"
+                            android:padding="10dp"
+                            android:textSize="18sp">
+
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/text_profile_saved_address"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Saved Addresses"
+                            android:fontFamily="@font/lato_regular"
+                            android:textColor="@color/black"
+                            android:drawableLeft="@drawable/location"
+                            android:drawableRight="@drawable/right_arrow"
+                            android:drawablePadding="10dp"
+                            android:padding="10dp"
+                            android:textSize="18sp">
+
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/text_profile_select_language"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Change Language"
+                            android:fontFamily="@font/lato_regular"
+                            android:textColor="@color/black"
+                            android:drawableLeft="@drawable/language"
+                            android:drawableRight="@drawable/right_arrow"
+                            android:drawablePadding="10dp"
+                            android:padding="10dp"
+                            android:textSize="18sp">
+
+                        </TextView>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Notification Setting"
+                            android:fontFamily="@font/lato_regular"
+                            android:textColor="@color/black"
+                            android:drawableLeft="@drawable/notification"
+                            android:drawableRight="@drawable/right_arrow"
+                            android:drawablePadding="10dp"
+                            android:padding="10dp"
+                            android:textSize="16sp">
+
+                        </TextView>
+
+
+
+
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:elevation="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginLeft="10dp"
+                            android:text="Feedback &amp; Information:"
+                            android:textColor="@color/black"
+                            android:textSize="20sp"
+                            android:textStyle="bold">
+
+                        </TextView>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="10dp">
+
+                        <TextView
+                            android:id="@+id/user_profile_feedback_terms_of_use"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Terms Of Use"
+                            android:fontFamily="@font/lato_regular"
+                            android:textColor="@color/black"
+                            android:drawableRight="@drawable/right_arrow"
+                            android:drawablePadding="10dp"
+                            android:padding="10dp"
+                            android:textSize="16sp">
+
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/user_profile_feedback_privacy_policy"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Privacy Policy"
+                            android:fontFamily="@font/lato_regular"
+                            android:textColor="@color/black"
+                            android:drawableRight="@drawable/right_arrow"
+                            android:drawablePadding="10dp"
+                            android:padding="10dp"
+                            android:textSize="16sp">
+
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/user_profile_feedback_infringement_policy"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Infringement Policy"
+                            android:fontFamily="@font/lato_regular"
+                            android:textColor="@color/black"
+                            android:drawableRight="@drawable/right_arrow"
+                            android:drawablePadding="10dp"
+                            android:padding="10dp"
+                            android:textSize="16sp">
+
+                        </TextView>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="License"
+                            android:fontFamily="@font/lato_regular"
+                            android:textColor="@color/black"
+                            android:drawableRight="@drawable/right_arrow"
+                            android:drawablePadding="10dp"
+                            android:padding="10dp"
+                            android:textSize="16sp">
+
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/user_profile_feedback_return_policy"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Returns Policy"
+                            android:fontFamily="@font/lato_regular"
+                            android:textColor="@color/black"
+                            android:drawableRight="@drawable/right_arrow"
+                            android:drawablePadding="10dp"
+                            android:padding="10dp"
+                            android:textSize="16sp">
+
+                        </TextView>
+
+                        <TextView
+                        android:id="@+id/user_profile_feedback_browse_FAQs"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Browse FAQs"
+                            android:fontFamily="@font/lato_regular"
+                            android:textColor="@color/black"
+                            android:drawableRight="@drawable/right_arrow"
+                            android:drawablePadding="10dp"
+                            android:padding="10dp"
+                            android:textSize="16sp">
+
+                        </TextView>
+
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+
+                <Button
+                    android:id="@+id/btn_profile_logout"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:textAllCaps="false"
+                    android:text="Logout"
+                    android:textColor="@color/white"
+                    android:background="@drawable/btn_buy_product">
+
+                </Button>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+</LinearLayout>
