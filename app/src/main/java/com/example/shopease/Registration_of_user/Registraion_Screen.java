@@ -164,13 +164,12 @@ public class Registraion_Screen extends AppCompatActivity {
                     }
                     else {
                         if (matname.matches() == true) {
-//                        progressBar_reg.setVisibility(View.GONE);
-//                        Toast.makeText(Registraion_Screen.this, "Name is not valid or empty", Toast.LENGTH_SHORT).show();
-//                        edit_reg_name.requestFocus();
+
                             edit_reg_name.setBackgroundResource(R.drawable.green_border);
                             flag = 0;
-//                        return;
+
                         } else {
+
                             edit_reg_name.setBackgroundResource(R.drawable.red_border);
                             txt_registration_error.setText("Fill the Details Properly");
                             txt_registration_error.setVisibility(View.VISIBLE);
@@ -214,12 +213,8 @@ public class Registraion_Screen extends AppCompatActivity {
                     }
                     else{
                         if(matemail.matches()==true){
-//                          progressBar_reg.setVisibility(View.GONE);
-//                          Toast.makeText(Registraion_Screen.this, "Email id is not valid or empty", Toast.LENGTH_SHORT).show();
-//                          edit_reg_email.requestFocus();
                             edit_reg_email.setBackgroundResource(R.drawable.green_border);
                             flag=0;
-//                            return;
                         }else{
                             edit_reg_email.setBackgroundResource(R.drawable.red_border);
                             txt_registration_error.setText("Fill the Details Properly");
@@ -263,12 +258,8 @@ public class Registraion_Screen extends AppCompatActivity {
                         flag=1;
                     }else{
                         if(matmobile.matches()==true){
-//                            progressBar_reg.setVisibility(View.GONE);
-//                            Toast.makeText(Registraion_Screen.this, "Mobile id is not valid or empty", Toast.LENGTH_SHORT).show();
-//                            edit_reg_mobile.requestFocus();
                             edit_reg_mobile.setBackgroundResource(R.drawable.green_border);
                             flag=0;
-//                            return;
                         }
                         else{
                             edit_reg_mobile.setBackgroundResource(R.drawable.red_border);
@@ -313,12 +304,8 @@ public class Registraion_Screen extends AppCompatActivity {
                         flag=1;
                     }else{
                         if(matpass.matches()==true ){
-//                            progressBar_reg.setVisibility(View.GONE);
-//                            Toast.makeText(Registraion_Screen.this, "Password is not valid or empty", Toast.LENGTH_SHORT).show();
-//                            edit_reg_password.requestFocus();
                             edit_reg_password.setBackgroundResource(R.drawable.green_border);
                             flag=0;
-//                            return;
                         }else{
                             edit_reg_password.setBackgroundResource(R.drawable.red_border);
                             txt_registration_error.setText("Fill the Details Properly");
@@ -359,9 +346,8 @@ public class Registraion_Screen extends AppCompatActivity {
                     }else{
                         //checking for the password and confirm password is matching or not
                         if(!password.equals(confirm_password)){
-//                            progressBar_reg.setVisibility(View.GONE);
                             edit_reg_confirm_password.setText("");
-//                            edit_reg_confirm_password.requestFocus();
+
                             edit_reg_confirm_password.setBackgroundResource(R.drawable.red_border);
                             txt_registration_error.setText("Fill the Details Properly");
                             txt_registration_error.setVisibility(View.VISIBLE);
@@ -455,66 +441,9 @@ public class Registraion_Screen extends AppCompatActivity {
 
                 }
 
+
 //                if all the feilds are correct than register user successfully
                 if(flag==0){
-
-//                    PhoneAuthProvider.getInstance().verifyPhoneNumber(
-//                            "+91 " + mobile.toString(),
-//                            60,
-//                            TimeUnit.SECONDS,
-//                            Registraion_Screen.this,
-//                            new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
-//                                @Override
-//                                public void onVerificationCompleted(@NonNull PhoneAuthCredential phoneAuthCredential) {
-////
-////                                    DatabaseReference mDatabase;
-////
-////
-////                                    mDatabase = FirebaseDatabase.getInstance().getReference();
-////
-////                                    // Store the user information in the Firebase database
-////                                    FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-////                                    mDatabase.child("User").child(user.getUid()).child("name").setValue(name);
-////                                    mDatabase.child("User").child(user.getUid()).child("email").setValue(email);
-////                                    mDatabase.child("User").child(user.getUid()).child("mobile").setValue(mobile);
-////                                    mDatabase.child("User").child(user.getUid()).child("password").setValue(password);
-////
-////                                    Toast.makeText(Registraion_Screen.this, "Registration successfull", Toast.LENGTH_SHORT).show();
-////                                    Intent intent_login = new Intent(Registraion_Screen.this , Login_Screen.class);
-////                                    startActivity(intent_login);
-////                                    finish();
-////
-//                                    Toast.makeText(Registraion_Screen.this, "Registration Successfull", Toast.LENGTH_SHORT).show();
-//                                    Intent intent_login = new Intent(Registraion_Screen.this , Login_Screen.class);
-//                                    startActivity(intent_login);
-//
-//                                }
-//
-//                                @Override
-//                                public void onVerificationFailed(@NonNull FirebaseException e) {
-//
-//                                    Toast.makeText(Registraion_Screen.this, "Verification Failed", Toast.LENGTH_SHORT).show();
-//
-//                                }
-//
-//                                @Override
-//                                public void onCodeSent(@NonNull String s, @NonNull PhoneAuthProvider.ForceResendingToken forceResendingToken) {
-//                                    super.onCodeSent(s, forceResendingToken);
-//
-//
-//                                    Intent intet_otp_verification = new Intent(Registraion_Screen.this , Otp_verification_page.class);
-//                                    intet_otp_verification.putExtra("name",name);
-//                                    intet_otp_verification.putExtra("mobile",mobile);
-//                                    intet_otp_verification.putExtra("email",email);
-//                                    intet_otp_verification.putExtra("password",password);
-//                                    intet_otp_verification.putExtra("otp_backend",s);
-//                                    startActivity(intet_otp_verification);
-//
-//
-//                                }
-//                            }
-//                    );
-
 
                     txt_registration_error.setText("");
                     txt_registration_error.setVisibility(View.GONE);
@@ -561,36 +490,6 @@ public class Registraion_Screen extends AppCompatActivity {
                                     }
                                 }
                             });   //auth block close
-
-
-
-
-//                    FirebaseAuth auth = FirebaseAuth.getInstance();
-//                    PhoneAuthProvider.OnVerificationStateChangedCallbacks mCallbacks = new PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
-//                        @Override
-//                        public void onVerificationCompleted(PhoneAuthCredential phoneAuthCredential) {
-//                            // Auto verification of OTP, if the SMS code has been detected by Google Play services.
-//                        }
-//
-//                        @Override
-//                        public void onVerificationFailed(FirebaseException e) {
-//                            // Handle the failure
-//                        }
-//
-//                        @Override
-//                        public void onCodeSent(String verificationId, PhoneAuthProvider.ForceResendingToken forceResendingToken) {
-//                            // Save the verification ID and the token so we can use them later
-//                            // Prompt the user to enter the OTP
-//                        }
-//                    };
-//
-//                    PhoneAuthProvider.getInstance().verifyPhoneNumber(
-//                            mobile,        // Phone number to verify
-//                            30,                 // Timeout duration
-//                            TimeUnit.SECONDS,   // Unit of timeout
-//                            Registraion_Screen.this,               // Activity (for callback binding)
-//                            mCallbacks);        // OnVerificationStateChangedCallbacks
-
 
 
                 }
