@@ -189,19 +189,6 @@ public class Product_deatils_grocery_page extends Fragment {
             }
         });
 
-//        // Get the price as a string from some input
-//        String priceStr = "10000.0";
-//
-//// Convert the price string to a double
-//        double price_double = Double.parseDouble(priceStr);
-//
-//// Calculate the EMI based on the price, rate of interest, and loan term
-//        double rateOfInterest = 10.0; // Assuming 10% rate of interest
-//        int loanTerm = 12; // Assuming 12 months loan term
-//        double monthlyInterest = rateOfInterest / (12 * 100);
-//        double emi = (price_double * monthlyInterest * Math.pow(1 + monthlyInterest, loanTerm)) / (Math.pow(1 + monthlyInterest, loanTerm) - 1);
-
-
 
 //          Set the data to the views in this fragment
         user_product_details_grocery_product_name.setText(name);

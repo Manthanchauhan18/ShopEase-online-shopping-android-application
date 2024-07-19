@@ -206,30 +206,7 @@ public class HomeFragment extends Fragment {
 //        //take list for offers and deals of the day
 //        List<SlideModel> slideModels_offer = new ArrayList<>();
         List<SlideModel> slideModels_day_deals = new ArrayList<>();
-//
-//
-//        //for offers import images from firebase offers section and display on imageslider
-//        firebaseDatabase.getInstance().getReference().child("Offers")
-//                .addListenerForSingleValueEvent(new ValueEventListener() {
-//                    @Override
-//                    public void onDataChange(@NonNull DataSnapshot snapshot) {
-//                        for(DataSnapshot data_offer : snapshot.getChildren() ){
-//
-//                            //get image from firebase and add into list
-//                            slideModels_offer.add(new SlideModel(data_offer.child("imageUrl").getValue().toString() , ScaleTypes.FIT));
-//                            //set list on imageslider
-//                            imageSlider_offer.setImageList(slideModels_offer , ScaleTypes.CENTER_CROP);
-//
-//                        }
-//                    }
-//
-//                    @Override
-//                    public void onCancelled(@NonNull DatabaseError error) {
-//
-//                        Toast.makeText(getContext(), ""+error.getMessage(), Toast.LENGTH_SHORT).show();
-//
-//                    }
-//                });
+
 
         firebaseDatabase = FirebaseDatabase.getInstance();
 
@@ -403,9 +380,6 @@ public class HomeFragment extends Fragment {
                         transaction.replace(R.id.frame_layout, new User_home_deals_of_the_day());
                         transaction.addToBackStack(null);
                         transaction.commit();
-        //
-        //                        BottomNavigationView bottomNavigationView_smartphone = getActivity().findViewById(R.id.bottom_navigation);
-        //                        bottomNavigationView_smartphone.setSelectedItemId(R.id.menu_categories);
 
                     }
                 });
@@ -455,64 +429,6 @@ public class HomeFragment extends Fragment {
                     }
 
                 });
-
-
-
-//        mDatabaseRef = FirebaseDatabase.getInstance().getReference("Upcoming Phones");
-//        mStorageRef = FirebaseStorage.getInstance().getReference();
-//
-//        mDatabaseRef.addValueEventListener(new ValueEventListener() {
-//            @Override
-//            public void onDataChange(DataSnapshot dataSnapshot) {
-//                int i = 1;
-//                for (DataSnapshot postSnapshot: dataSnapshot.getChildren()) {
-//                    // Get the image URL and name from Firebase Database
-//                    imageUrl_phone = postSnapshot.child("imageUrl_phone").getValue().toString();
-//                     phoneName = postSnapshot.child("smartphone_name").getValue().toString();
-//
-//                    // Get a reference to the image file in Firebase Storage
-////                    imageRef_phone = mStorageRef.child("Upcoming Phones");
-//
-//                    // Load the image into the ImageView
-//                    switch (i) {
-//                        case 1:
-//                            txt_home_smartphone_1.setText(phoneName);
-//                            Glide.with(HomeFragment.this)
-//                                    .load(postSnapshot.child("imageUrl_phone").getValue().toString())
-//                                    .into(home_smartphone_image_1);
-//                            break;
-//                        case 2:
-//                            txt_home_smartphone_2.setText(phoneName);
-//                            Glide.with(HomeFragment.this)
-//                                    .load(postSnapshot.child("imageUrl_phone").getValue().toString())
-//                                    .into(home_smartphone_image_2);
-//                            break;
-//                        case 3:
-//                            txt_home_smartphone_3.setText(phoneName);
-//                            Glide.with(HomeFragment.this)
-//                                    .load(postSnapshot.child("imageUrl_phone").getValue().toString())
-//                                    .into(home_smartphone_image_3);
-//                            break;
-//                        case 4:
-//                            txt_home_smartphone_4.setText(phoneName);
-//                            Glide.with(HomeFragment.this)
-//                                    .load(postSnapshot.child("imageUrl_phone").getValue().toString())
-//                                    .into(home_smartphone_image_4);
-//                            break;
-//                    }
-//
-//                    i++;
-//                    if (i > 4) {
-//                        break;
-//                    }
-//                }
-//            }
-//
-//            @Override
-//            public void onCancelled(DatabaseError databaseError) {
-//                // Handle errors
-//            }
-//        });
 
 
 
@@ -681,99 +597,6 @@ public class HomeFragment extends Fragment {
 
 
 
-
-
-//        mDatabaseRef = FirebaseDatabase.getInstance().getReference("Category");
-//        mStorageRef = FirebaseStorage.getInstance().getReference();
-//
-//        mDatabaseRef.addValueEventListener(new ValueEventListener() {
-//            @Override
-//            public void onDataChange(DataSnapshot dataSnapshot) {
-//                int i = 1;
-//                for (DataSnapshot postSnapshot: dataSnapshot.getChildren()) {
-//                    // Get the image URL and name from Firebase Database
-//                    imageUrl_category = postSnapshot.child("imageUrl").getValue().toString();
-//                    categoryName = postSnapshot.child("category_name").getValue().toString();
-//
-//                    // Get a reference to the image file in Firebase Storage
-////                    imageRef_phone = mStorageRef.child("Upcoming Phones");
-//
-//                    // Load the image into the ImageView
-//                    switch (i) {
-//                        case 1:
-//                            txt_home_category_1.setText(categoryName);
-//                            Glide.with(HomeFragment.this)
-//                                    .load(postSnapshot.child("imageUrl").getValue().toString())
-//                                    .into(image_home_category_1);
-//                            break;
-//                        case 2:
-//                            txt_home_category_2.setText(categoryName);
-//                            Glide.with(HomeFragment.this)
-//                                    .load(postSnapshot.child("imageUrl").getValue().toString())
-//                                    .into(image_home_category_2);
-//                            break;
-//                        case 3:
-//                            txt_home_category_3.setText(categoryName);
-//                            Glide.with(HomeFragment.this)
-//                                    .load(postSnapshot.child("imageUrl").getValue().toString())
-//                                    .into(image_home_category_3);
-//                            break;
-//                        case 4:
-//                            txt_home_category_4.setText(categoryName);
-//                            Glide.with(HomeFragment.this)
-//                                    .load(postSnapshot.child("imageUrl").getValue().toString())
-//                                    .into(image_home_category_4);
-//                            break;
-//                        case 5:
-//                            txt_home_category_5.setText(categoryName);
-//                            Glide.with(HomeFragment.this)
-//                                    .load(postSnapshot.child("imageUrl").getValue().toString())
-//                                    .into(image_home_category_5);
-//                            break;
-//
-//                        case 6:
-//                            txt_home_category_6.setText(categoryName);
-//                            Glide.with(HomeFragment.this)
-//                                    .load(postSnapshot.child("imageUrl").getValue().toString())
-//                                    .into(image_home_category_6);
-//                            break;
-//
-//                        case 7:
-//                            txt_home_category_7.setText(categoryName);
-//                            Glide.with(HomeFragment.this)
-//                                    .load(postSnapshot.child("imageUrl").getValue().toString())
-//                                    .into(image_home_category_7);
-//                            break;
-//
-//                        case 8:
-//                            txt_home_category_8.setText(categoryName);
-//                            Glide.with(HomeFragment.this)
-//                                    .load(postSnapshot.child("imageUrl").getValue().toString())
-//                                    .into(image_home_category_8);
-//                            break;
-//
-//                        case 9:
-//                            txt_home_category_9.setText(categoryName);
-//                            Glide.with(HomeFragment.this)
-//                                    .load(postSnapshot.child("imageUrl").getValue().toString())
-//                                    .into(image_home_category_9);
-//                            break;
-//
-//                    }
-//
-//                    i++;
-//                    if (i > 9) {
-//                        break;
-//                    }
-//                }
-//            }
-//
-//            @Override
-//            public void onCancelled(DatabaseError databaseError) {
-//                // Handle errors
-//            }
-//        });
-
         mDatabaseRef = FirebaseDatabase.getInstance().getReference("Headphone_brands");
         mStorageRef = FirebaseStorage.getInstance().getReference();
 
@@ -921,64 +744,6 @@ public class HomeFragment extends Fragment {
         });
 
 
-
-//        mDatabaseRef = FirebaseDatabase.getInstance().getReference("Headphone_brands");
-//        mStorageRef = FirebaseStorage.getInstance().getReference();
-//
-//        mDatabaseRef.addValueEventListener(new ValueEventListener() {
-//            @Override
-//            public void onDataChange(DataSnapshot dataSnapshot) {
-//                int i = 1;
-//                for (DataSnapshot postSnapshot: dataSnapshot.getChildren()) {
-//                    // Get the image URL and name from Firebase Database
-//                    imageUrl_headphone_brand = postSnapshot.child("headphone_brand_imageUrl").getValue().toString();
-//                    headphone_brand_Name = postSnapshot.child("headphone_brand_name").getValue().toString();
-//
-//                    // Get a reference to the image file in Firebase Storage
-////                    imageRef_phone = mStorageRef.child("Upcoming Phones");
-//
-//                    // Load the image into the ImageView
-//                    switch (i) {
-//                        case 1:
-//                            txt_home_headphone_brand_1.setText(headphone_brand_Name);
-//                            Glide.with(HomeFragment.this)
-//                                    .load(postSnapshot.child("headphone_brand_imageUrl").getValue().toString())
-//                                    .into(home_headphone_brand_image_1);
-//                            break;
-//                        case 2:
-//                            txt_home_headphone_brand_2.setText(headphone_brand_Name);
-//                            Glide.with(HomeFragment.this)
-//                                    .load(postSnapshot.child("headphone_brand_imageUrl").getValue().toString())
-//                                    .into(home_headphone_brand_image_2);
-//                            break;
-//                        case 3:
-//                            txt_home_headphone_brand_3.setText(headphone_brand_Name);
-//                            Glide.with(HomeFragment.this)
-//                                    .load(postSnapshot.child("headphone_brand_imageUrl").getValue().toString())
-//                                    .into(home_headphone_brand_image_3);
-//                            break;
-//                        case 4:
-//                            txt_home_headphone_brand_4.setText(headphone_brand_Name);
-//                            Glide.with(HomeFragment.this)
-//                                    .load(postSnapshot.child("headphone_brand_imageUrl").getValue().toString())
-//                                    .into(home_headphone_brand_image_4);
-//                            break;
-//                    }
-//
-//                    i++;
-//                    if (i > 4) {
-//                        break;
-//                    }
-//                }
-//            }
-//
-//            @Override
-//            public void onCancelled(DatabaseError databaseError) {
-//                // Handle errors
-//            }
-//        });
-
-
         mDatabaseRef = FirebaseDatabase.getInstance().getReference("Top_ac");
         mStorageRef = FirebaseStorage.getInstance().getReference();
 
@@ -1079,66 +844,6 @@ public class HomeFragment extends Fragment {
 
             }
         });
-
-
-
-//        mDatabaseRef = FirebaseDatabase.getInstance().getReference("Grocery");
-//        mStorageRef = FirebaseStorage.getInstance().getReference();
-//
-//        mDatabaseRef.addValueEventListener(new ValueEventListener() {
-//            @Override
-//            public void onDataChange(DataSnapshot dataSnapshot) {
-//                int i = 1;
-//                for (DataSnapshot postSnapshot: dataSnapshot.getChildren()) {
-//                    // Get the image URL and name from Firebase Database
-//                    grocery_imageUrl = postSnapshot.child("grocery_imageUrl").getValue().toString();
-//                    grocery_Name = postSnapshot.child("grocery_name").getValue().toString();
-//
-//                    // Get a reference to the image file in Firebase Storage
-////                    imageRef_phone = mStorageRef.child("Upcoming Phones");
-//
-//                    // Load the image into the ImageView
-//                    switch (i) {
-//                        case 1:
-//                            txt_home_grocery_offer_1.setText(grocery_Name);
-//                            Glide.with(HomeFragment.this)
-//                                    .load(postSnapshot.child("grocery_imageUrl").getValue().toString())
-//                                    .into(home_grocery_offer_image_1);
-//                            break;
-//                        case 2:
-//                            txt_home_grocery_offer_2.setText(grocery_Name);
-//                            Glide.with(HomeFragment.this)
-//                                    .load(postSnapshot.child("grocery_imageUrl").getValue().toString())
-//                                    .into(home_grocery_offer_image_2);
-//                            break;
-//                        case 3:
-//                            txt_home_grocery_offer_3.setText(grocery_Name);
-//                            Glide.with(HomeFragment.this)
-//                                    .load(postSnapshot.child("grocery_imageUrl").getValue().toString())
-//                                    .into(home_grocery_offer_image_3);
-//                            break;
-//                        case 4:
-//                            txt_home_grocery_offer_4.setText(grocery_Name);
-//                            Glide.with(HomeFragment.this)
-//                                    .load(postSnapshot.child("grocery_imageUrl").getValue().toString())
-//                                    .into(home_grocery_offer_image_4);
-//                            break;
-//                    }
-//
-//                    i++;
-//                    if (i > 4) {
-//                        break;
-//                    }
-//                }
-//            }
-//
-//            @Override
-//            public void onCancelled(DatabaseError databaseError) {
-//                // Handle errors
-//            }
-//        });
-
-
 
 
 

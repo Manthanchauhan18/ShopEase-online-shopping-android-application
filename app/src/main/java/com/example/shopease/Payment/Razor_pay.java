@@ -189,7 +189,7 @@ public class Razor_pay extends Activity implements PaymentResultWithDataListener
     @Override
     public void onExternalWalletSelected(String s, PaymentData paymentData) {
         try{
-            payment_status.setText("External Wallet Selected:\n\nPayment Data: "+paymentData.getData());
+            payment_status.setText("External Wallet Selected");
             payment_status.setVisibility(View.VISIBLE);
         }catch (Exception e){
             e.printStackTrace();
@@ -200,7 +200,7 @@ public class Razor_pay extends Activity implements PaymentResultWithDataListener
     @Override
     public void onPaymentSuccess(String s, PaymentData paymentData) {
         try{
-            payment_status.setText("Payment Successful :\n\nPayment ID: "+s+"\n\nPayment Data: "+paymentData.getData());
+            payment_status.setText("Payment Successful :\n\nPayment ID: "+s);
             payment_status.setVisibility(View.VISIBLE);
 
             // Get the current date and time
@@ -241,7 +241,7 @@ public class Razor_pay extends Activity implements PaymentResultWithDataListener
     @Override
     public void onPaymentError(int i, String s, PaymentData paymentData) {
         try{
-            payment_status.setText("Payment Failed:\n\nPayment Data: "+paymentData.getData());
+            payment_status.setText("Payment Failed");
             payment_status.setVisibility(View.VISIBLE);
         }catch (Exception e){
             e.printStackTrace();
