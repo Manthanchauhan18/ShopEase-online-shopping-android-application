@@ -143,11 +143,6 @@ public class CartFragment extends Fragment {
 //                intent_razor_pay.putExtra("price" , price);
                 startActivity(intent_razor_pay);
 
-//                FragmentTransaction transaction = getParentFragmentManager().beginTransaction();
-//                transaction.replace(R.id.frame_layout, new Razor_payment());
-//                transaction.addToBackStack(null);
-//                transaction.commit();
-
 
             }
         });
